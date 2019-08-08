@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        ssssss
+    </div>
+</body>
+</html>
+<script>
+//  冒泡排序
+    var arr = [9,3,4,1,5,8,6,7,2]
+    for(let i=0;i<(arr.length -1); i++ ){ // 确定头部顺序
+        for(let j = (arr.length-1); j>i; j--) { // 确定尾部顺序
+            if(arr[j-1] > arr[j]) {
+                let temp = arr[j-1]
+                arr[j-1] = arr[j]
+                arr[j] = temp
+            } 
+        }
+    }
+    console.log(arr)
+</script>

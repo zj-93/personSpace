@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        dddd
+    </div>
+</body>
+</html>
+<script>
+    // 数租的操作
+    var a = [9,1,3,5,2,6,2,7,8,9,0,1,3,4,9]
+    // clone
+    var b= a.concat()
+    console.log(b)
+    // 去重
+    b.sort((a, b) => {
+        return a-b
+    })
+    console.log(b)
+    function Fun() {
+        const c =[]
+        b.forEach((e, i) => {
+            if(b[i+1]) {
+                if(b[i+1] - b[i]> 0) {
+                    c.push(b[i])
+                }
+            } else {
+                if(b[i] - b[0]> 0) {
+                    c.push(b[i])
+                }
+            }
+            
+        })
+        console.log(c)
+    }
+    Fun()
+    // 去重
+    var c= a.concat() //污染数据源
+    var d = []
+    for(let i=0; i<c.length; i++) {
+        if(d.indexOf(c[i]) === -1) {
+            d.push(c[i])
+        }
+    }
+    d.sort((a, b) => {
+        return a-b
+    })
+    console.log(d)
+    // 数组操作 增删改查
+    //污染数据源
+    // d.splice(0,1, 'a','b','c') 
+    // d.push(0) // 最后插入
+    // d.shift() // 删除第一个元素
+    // d.unshift(0) // 最前面插入
+    // d.pop() // 删除最后一个元素
+    d.reverse()
+    // 不污染
+    // d.slice(1,2) // 截取
+    // d.join()
+    console.log(d)
+</script>

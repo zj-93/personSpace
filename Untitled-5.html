@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        ssssss
+    </div>
+</body>
+</html>
+<script>
+//  去重
+    var list = [9,3,4,1,5,8,6,7,2,4,6,1,4,6,9,3]
+    var arr=[],hash={};
+    var bChange = false; // 交换标志
+    for(var i=0,element;(element=list[i])!=null;i++){
+        if(!hash[element]){
+            arr.push(element);
+            hash[element]=true;
+        }
+    }
+    console.log(arr)
+//  排序
+    for(let i=0;i<(arr.length -1); i++ ){ // 确定头部顺序
+        bChange = false;
+        for(let j = (arr.length-1); j>i; j--) { // 确定尾部顺序
+            if(arr[j-1] > arr[j]) {
+                let temp = arr[j-1]
+                arr[j-1] = arr[j]
+                arr[j] = temp
+                bChange = true;
+            }
+        }
+        if (false == bChange) {
+            break;
+        }
+    }
+    console.log(arr)
+</script>

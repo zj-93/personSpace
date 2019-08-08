@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        ssssss
+    </div>
+</body>
+</html>
+<script>
+    var a = 'h$el$lo$Wo$rd'
+    // 不污染数据源
+    a.charAt('$')
+    console.log(a,a.charAt('$'))
+    a.split('$')
+    console.log(a,a.split('$'))
+    a.slice(1,5)
+    console.log(a,a.slice(1,5))
+    a.substring(1,5)
+    console.log(a,a.substring(1,5)) // 下标，下标
+    a.substr(1,5)
+    console.log(a,a.substr(1,2)) // 下标，长度
+    a.search('$')
+    console.log(a,a.search('$'))
+    
+</script>
