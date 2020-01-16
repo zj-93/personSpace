@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        ssssss
+    </div>
+</body>
+
+</html>
+<script>
+    
+    let arr = [{
+        id: '1',
+        name: 11
+    }, {
+        id: '2',
+        name: 22
+    }, {
+        id: '3',
+        name: 33
+    }, {
+        id: '1',
+        name: 11
+    }, {
+        id: '1',
+        name: 22
+    }, {
+        id: '1',
+        name: 44
+    }]
+
+    let resultArr = []
+
+    arr.forEach(ele => {
+        if (resultArr.findIndex(a => a.id == ele.id)) {
+            continue
+        } else {
+            let tempArr = arr.find(item => item.id == ele.id)
+            let str = ''
+            tempArr.forEach(i => {
+                str += i.name
+            })
+            let timer = str / tempArr.length
+            ele.name = timer
+            resultArr.push(ele)
+        }
+
+    })
+    console.log(resultArr)
+// let obj = {}
+// let tempArr = arr.reduce((next,arr) => {
+//     if(next.id) {
+
+//     }
+// }, [])
+
+</script>

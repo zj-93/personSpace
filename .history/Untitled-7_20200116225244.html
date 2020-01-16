@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        ssssss
+    </div>
+</body>
+
+</html>
+<script>
+    const arr = [1, 3, 4, 2, 5, 6, 1, 5, 2, 5, 10, 22, 33, 1, 33, 22, 5, 0, 6, 235, 324, 1231, 543, 2342, 123, 123, 144, 435, 34634, 2123]
+    let j = 1 //page
+    let k = 0 // 
+    let arr = [{
+        id: '1',
+        name: 11
+    }, {
+        id: '2',
+        name: 22
+    }, {
+        id: '3',
+        name: 33
+    }, {
+        id: '1',
+        name: 11
+    }, {
+        id: '1',
+        name: 22
+    }, {
+        id: '1',
+        name: 44
+    }]
+
+    let resultArr = []
+
+    arr.forEach(ele => {
+        if (resultArr.findIndex(a => a.id == ele.id)) {
+            continue
+        } else {
+            let tempArr = arr.find(item => item.id == ele.id)
+            let str = ''
+            tempArr.forEach(i => {
+                str += i.name
+            })
+            let timer = str / tempArr.length
+            ele.name = timer
+            resultArr.push(ele)
+        }
+
+    })
+    console.log(resultArr)
+// let obj = {}
+// let tempArr = arr.reduce((next,arr) => {
+//     if(next.id) {
+
+//     }
+// }, [])
+
+</script>
